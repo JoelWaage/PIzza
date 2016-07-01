@@ -6,9 +6,7 @@ var inputtedCheese = [];
 var inputtedVeg = [];
 var inputtedSauce = [];
 
-var protein = [];
-
-function Pizza(size,crust,protein,cheese,veg,sauce) {
+function Pizza(size, crust, protein, cheese, veg, sauce) {
   this.size = size;
   this.crust = crust;
   this.protein = [];
@@ -16,6 +14,9 @@ function Pizza(size,crust,protein,cheese,veg,sauce) {
   this.veg = [];
   this.sauce = sauce;
 }
+
+
+
 
 
 
@@ -36,13 +37,18 @@ $(document).ready(function() {
       inputtedVeg.push($(this).val());
     });
     inputtedSauce = $("#sauce").val();
-    console.log(inputtedSize);
-    console.log(inputtedCrust);
-    console.log(inputtedProtein);
-    console.log(inputtedCheese);
-    console.log(inputtedVeg);
-    console.log(inputtedSauce);
+
+    var proteinString = inputtedProtein.join(', ')
+    var cheeseString = inputtedCheese.join(', ')
+    var vegString = inputtedVeg.join(', ')
+
+    console.log(proteinString);
+    console.log(cheeseString);
+    console.log(vegString);
+
   });
+
+
 
 
 
