@@ -35,10 +35,12 @@
                   <li>Our signature pie with house-made pesto as the sauce, a light sprinkling of hard cheeses all topped with an egg, sunnyside up.  (If you're getting this one delivered, we recommend cooking the egg on the stovetop before serving).</li>
                 </ul>
               <br>
+              <br>
               <li><strong>Tableside</strong></li>
                 <ul>
                   <li>Tableside is a reference to our favorite appetizer at any Mexican restaurant, the tableside guacamole.  Tableside has an ultra this crust pizza, topped with a Tapatio inspired red sauce and cotija cheese.  We top off the hot pie with a heaping scoop of our fresh guacamole</li>
                 </ul>
+              <br>
               <br>
               <li><strong>Buffalo buffalo Buffalo buffalo buffalo buffalo buffalo Buffalo buffalo</strong></li>
                 <ul>
@@ -56,10 +58,10 @@
               <div class="col-md-6">
                 <p class="ingredient">Choose Your Size</p>
                 <select class="form-control" id="size">
-                  <option>Large (feeds 4-6 people)</option>
-                  <option>Medium (feeds3-5 people)</option>
-                  <option>Small (feeds 2, or 1 very hungry person)</option>
-                  <option>Personal (feeds 1)</option>
+                  <option value="1">Large (feeds 4-6 people)</option>
+                  <option value="2">Medium (feeds3-5 people)</option>
+                  <option value="3">Small (feeds 2, or 1 very hungry person)</option>
+                  <option value="4">Personal (feeds 1)</option>
                 </select>
               </div>
               <div class="col-md-6">
@@ -99,8 +101,30 @@
                 <input type="checkbox" name="veg" value="reds"> Red Onions<br>
                 <input type="checkbox" name="veg" value="vidalia"> Vidalia Onions<br>
               </div>
-
             </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="ingredient">Feeling Saucy?!?!</p>
+                <select class="form-control" id="sauce">
+                  <option value="1">Our House Red</option>
+                  <option value="2">Tapatio-Inpired Red</option>
+                  <option value="3">Pesto</option>
+                  <option value="4">No Sauce</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="ingredient" for="instructions">Special Instructions</label>
+                <input id="instructions" class="form-control" type="text" placeholder="we also accept compliments">
+              </div>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-warning btn-lrg">Place Your Order</button>
+
+
+
         </div>
 
       </div>
