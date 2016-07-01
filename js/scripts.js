@@ -16,11 +16,20 @@ function Pizza(size, crust, protein, cheese, veg, sauce) {
 }
 
 Pizza.prototype.fullPie = function() {
-  return this.size + " pie with a" + this.crust + " Crust " + this.protein + this.cheese  + this.veg + "and" + this.sauce + " as your sauce.";
+  return this.size + " pie with a" + this.crust + " Crust " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " as your sauce.";
 }
 
-
-
+var total = function() {
+  if (inputtedSize === "Large") {
+    return (19 + ((inputtedProtein.length - 1) * 2.5) + ((inputtedCheese.length -1) * 1.5) + (inputtedVeg.length -1));
+  } else if (inputtedSize === "Medium") {
+    return (17 + ((inputtedProtein.length - 1) * 2) + (inputtedCheese.length - 1) + ((inputtedVeg.length - 1) * .75));
+  } else if (inputtedSize === "Small") {
+    return (15 + ((inputtedProtein.length - 1) * 1.5) + ((inputtedCheese.length - 1) * .75) + ((inputtedVeg.length - 1) * .50));
+  } else if (inputtedSize === "Personal") {
+    return (10 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
+  }
+}
 
 
 //user logic
@@ -48,7 +57,7 @@ $(document).ready(function() {
 
     $("#placedOrder").show();
     $(".orderedPie").text(newPizza.fullPie());
-    $(".orderedAmount").text("placholder");
+    $(".orderedAmount").append(total);
 
 
 
