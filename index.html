@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <br>
-      <div class="jumbotron">
+      <div class="jumbotron" id="titleJumbotron">
         <h1><strong>Hippie College Town Pizza</strong></h1>
       </div>
 <!-- Intro Section -->
@@ -25,10 +25,8 @@
       <hr>
 <!-- Menu -->
       <div class="row">
-        <div class="col-md-6 inverse">
-          <br>
-          <h2><strong>Our Specialty Pies</strong></h2>
-          <br>
+        <div class="col-md-6 jumbotron">
+          <h2 class="pieTitle"><strong>Our Specialty Pies</strong></h2>
             <ul>
               <li><strong>P-Egg-STO</strong></li>
                 <ul>
@@ -46,12 +44,10 @@
                 <ul>
                   <li>This hearty pie comes with our house-made signature red sauce, topped with a healthy portion of ground bison meat spiced to perfection.  Add some mozzerella and a smattering of gorgonzola, and you have a delicious pizza inspired by <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" class="link">Noam Chomsky's baffling, yet gramatically correct sentence.</a></li>
               </ul>
-              <br>
-              <br>
         </div>
 <!-- Build Your Own Form -->
         <div class="col-md-6">
-          <h2><strong>Build Your Own Pie</strong></h2>
+          <h2 class="pieTitle"><strong>Build Your Own Pie</strong></h2>
           <br>
           <form id="build">
             <div class="row">
@@ -108,10 +104,10 @@
               <div class="col-md-6">
                 <p class="ingredient">Feeling Saucy?!?!</p>
                 <select class="form-control" id="sauce">
-                  <option value="House Red">Our House Red</option>
+                  <option value=" Our House Red">Our House Red</option>
                   <option value="Tapatio">Tapatio-Inpired Red</option>
                   <option value="Pesto">Pesto</option>
-                  <option value="No">No Sauce</option>
+                  <option value="Barbecue">Barbecue</option>
                 </select>
               </div>
               <div class="col-md-6">
@@ -123,14 +119,24 @@
             <br>
             <button type="submit" class="btn btn-warning btn-lrg">Place Your Order</button>
           </form>
-
-
         </div>
-
-      </div>
-
       </div>
       <hr>
+      <div id="placedOrder">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="img/oven.jpg" alt="delicious wood-fired pizza" class="img-rounded img-responsive" />
+          </div>
+          <div class="col-md-7 jumbotron">
+            <h2>You Ordered a:</h2>
+            <h2><strong><span class="orderedPie"></span></strong><h2>
+            <h3><strong>Your Total is:  <span class="orderedAmount"></span></strong><h3>
+          </div>
+        </div>
+        <br>
+        <br>
+
+      </div>
     </div>
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/scripts.js"></script>

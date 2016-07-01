@@ -1,9 +1,9 @@
 // business logic
 var inputtedSize = '';
 var inputtedCrust = '';
-var inputtedProtein = [];
-var inputtedCheese = [];
-var inputtedVeg = [];
+var inputtedProtein = [" "];
+var inputtedCheese = [" "];
+var inputtedVeg = [" "];
 var inputtedSauce = [];
 
 function Pizza(size, crust, protein, cheese, veg, sauce) {
@@ -16,7 +16,7 @@ function Pizza(size, crust, protein, cheese, veg, sauce) {
 }
 
 Pizza.prototype.fullPie = function() {
-  return this.size + " pie with a" + this.crust + " crust, " + this.protein + ", " + this.cheese + ", " + this.veg + ", and " + this.sauce + " as your sauce.";
+  return this.size + " pie with a" + this.crust + " Crust " + this.protein + this.cheese  + this.veg + "and" + this.sauce + " as your sauce.";
 }
 
 
@@ -30,13 +30,13 @@ $(document).ready(function() {
     inputtedSize = $("#size").val();
     inputtedCrust = $("#crust").val();
     $("input:checkbox[name=protein]:checked").each(function(){
-      inputtedProtein.push($(this).val());
+      inputtedProtein.unshift($(this).val());
     });
     $("input:checkbox[name=cheese]:checked").each(function(){
-      inputtedCheese.push($(this).val());
+      inputtedCheese.unshift($(this).val());
     });
     $("input:checkbox[name=veg]:checked").each(function(){
-      inputtedVeg.push($(this).val());
+      inputtedVeg.unshift($(this).val());
     });
     inputtedSauce = $("#sauce").val();
 
@@ -46,7 +46,11 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(inputtedSize, inputtedCrust, proteinString, cheeseString, vegString, inputtedSauce);
 
-    console.log(newPizza.fullPie())
+    $("#placedOrder").show();
+    $(".orderedPie").text(newPizza.fullPie());
+    $(".orderedAmount").text("placholder");
+
+
 
   });
 
