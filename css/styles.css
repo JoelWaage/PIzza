@@ -1,0 +1,17 @@
+body {
+  background-color: #669999;
+  color:#003300;
+}
+
+h1 {
+  background-color:white;
+}
+
+.jumbotron {
+  padding-top: 50px;
+  background: url('../img/jumbo.jpg');
+}
+
+#mission {
+  font-size: 2.3em;
+}
