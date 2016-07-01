@@ -9,13 +9,15 @@ var inputtedSauce = [];
 function Pizza(size, crust, protein, cheese, veg, sauce) {
   this.size = size;
   this.crust = crust;
-  this.protein = [];
-  this.cheese = [];
-  this.veg = [];
+  this.protein = protein;
+  this.cheese = cheese;
+  this.veg = veg;
   this.sauce = sauce;
 }
 
-
+Pizza.prototype.fullPie = function() {
+  return this.size + " pie with a" + this.crust + " crust, " + this.protein + ", " + this.cheese + ", " + this.veg + ", and " + this.sauce + " as your sauce.";
+}
 
 
 
@@ -42,9 +44,9 @@ $(document).ready(function() {
     var cheeseString = inputtedCheese.join(', ')
     var vegString = inputtedVeg.join(', ')
 
-    console.log(proteinString);
-    console.log(cheeseString);
-    console.log(vegString);
+    var newPizza = new Pizza(inputtedSize, inputtedCrust, proteinString, cheeseString, vegString, inputtedSauce);
+
+    console.log(newPizza.fullPie())
 
   });
 
