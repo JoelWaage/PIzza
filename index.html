@@ -27,6 +27,7 @@
       <div class="row">
         <div class="col-md-6 jumbotron">
           <h2 class="pieTitle"><strong>Our Specialty Pies</strong></h2>
+          <br>
             <ul>
               <li><strong>P-Egg-STO</strong></li>
                 <ul>
@@ -47,17 +48,37 @@
         </div>
 <!-- Build Your Own Form -->
         <div class="col-md-6">
+          <br>
           <h2 class="pieTitle"><strong>Build Your Own Pie</strong></h2>
+          <br>
+          <div class="row" id="prices">
+            <div class="col-md-3">
+              <p>large</p>
+              <p>$19</p>
+            </div>
+            <div class="col-md-3">
+              <p>medium</p>
+              <p>$17</p>
+            </div>
+            <div class="col-md-3">
+              <p>small</p>
+              <p>$15</p>
+            </div>
+            <div class="col-md-3">
+              <p>personal</p>
+              <p>$9</p>
+            </div>
+          </div>
           <br>
           <form id="build">
             <div class="row">
               <div class="col-md-7">
                 <p class="ingredient">Choose Your Size</p>
                 <select class="form-control" id="size">
-                  <option value ="Large">Large (feeds 4-6 people)</option>
-                  <option value = "Medium">Medium (feeds 3-5 people)</option>
-                  <option value = "Small">Small (feeds 2, or 1 very hungry person)</option>
-                  <option value = "Personal">Personal (feeds 1)</option>
+                  <option value ="Large">Large - $19   (4-6 people)</option>
+                  <option value = "Medium">Medium - $17   (3-5 people)</option>
+                  <option value = "Small">Small  - $15   (2 people)</option>
+                  <option value = "Personal">Personal - $9   (1 person)</option>
                 </select>
               </div>
               <div class="col-md-5">
@@ -80,6 +101,7 @@
                 <input type="checkbox" name="protein" value="Bacon"> Bacon<br>
                 <input type="checkbox" name="protein" value="Buffalo"> Ground Buffalo<br>
                 <input type="checkbox" name="protein" value="Anchovies"> Anchovies<br>
+                <p class="toppingPrice">$2.50 / $2 / $1.50 / $1</p>
               </div>
               <div class="col-md-4">
                 <p class="ingredient">Keep it Cheesy</p>
@@ -87,6 +109,7 @@
                 <input type="checkbox" name="cheese" value="Feta"> Feta<br>
                 <input type="checkbox" name="cheese" value="Cotija"> Cotija<br>
                 <input type="checkbox" name="cheese" value="Gorgonzola"> Gorgonzola<br>
+                <p class="toppingPrice">$1.50 / $1 / $.75 / $.50</p>
               </div>
               <div class="col-md-4">
                 <p class="ingredient">Veggies and Fungi</p>
@@ -96,6 +119,7 @@
                 <input type="checkbox" name="veg" value="Cremini Mushrooms"> Cremini Mushrooms<br>
                 <input type="checkbox" name="veg" value="Red Onions"> Red Onions<br>
                 <input type="checkbox" name="veg" value="Vidalia Onions"> Vidalia Onions<br>
+                <p class="toppingPrice">$1 / $.75 / $.50 / $.25</p>
               </div>
             </div>
             <br>
@@ -117,7 +141,7 @@
             </div>
             <br>
             <br>
-            <button type="submit" class="btn btn-warning btn-lrg">Place Your Order</button>
+            <button type="submit" class="btn btn-warning btn-lrg">Add to Order</button>
           </form>
         </div>
       </div>
@@ -128,8 +152,10 @@
             <img src="img/oven.jpg" alt="delicious wood-fired pizza" class="img-rounded img-responsive" />
           </div>
           <div class="col-md-7 jumbotron">
-            <h2>You Ordered a:</h2>
-            <h2><strong><span class="orderedPie"></span></strong><h2>
+            <h2>You Ordered:</h2>
+            <ul class="orderedPie">
+
+            </ul>
             <h3><strong>Your Total is:  $<span class="orderedAmount"></span></strong><h3>
           </div>
         </div>

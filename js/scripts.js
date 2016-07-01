@@ -27,7 +27,7 @@ var total = function() {
   } else if (inputtedSize === "Small") {
     return (15 + ((inputtedProtein.length - 1) * 1.5) + ((inputtedCheese.length - 1) * .75) + ((inputtedVeg.length - 1) * .50));
   } else if (inputtedSize === "Personal") {
-    return (10 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
+    return (9 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
   }
 }
 
@@ -56,15 +56,8 @@ $(document).ready(function() {
     var newPizza = new Pizza(inputtedSize, inputtedCrust, proteinString, cheeseString, vegString, inputtedSauce);
 
     $("#placedOrder").show();
-    $(".orderedPie").text(newPizza.fullPie());
-    $(".orderedAmount").append(total);
-
-
-
+    $(".orderedPie").append("<li>" + "One " + newPizza.fullPie() + "</li>");
+    $(".orderedAmount").text(total);
+    $("#build").trigger("reset");
   });
-
-
-
-
-
 });
