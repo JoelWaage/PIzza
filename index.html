@@ -18,14 +18,15 @@
           <img src="img/van.jpg" alt="a rad bus for delivering rad pizza" class="img-rounded img-responsive" />
         </div>
         <div class="col-sm-8" id="mission">
-          <p>making <strong>PIZZA</strong> for students and professors and whatnot for over <strong>40 years</strong>. </p>
-          <p>We put interesting stuff on a sourdough crust and it's <strong>amazing</strong>.</p>
+          <p>making <strong>PIZZA</strong> for students, professors and the general riff-raff for over <strong>40 years</strong>. </p>
+          <p>we put interesting stuff on a sourdough crust and it's <strong>amazing</strong>.</p>
         </div>
       </div>
       <hr>
 <!-- Menu -->
       <div class="row">
         <div class="col-md-6 inverse">
+          <br>
           <h2><strong>Our Specialty Pies</strong></h2>
           <br>
             <ul>
@@ -41,22 +42,65 @@
               <br>
               <li><strong>Buffalo buffalo Buffalo buffalo buffalo buffalo buffalo Buffalo buffalo</strong></li>
                 <ul>
-                  <li>This hearty pie comes with our house-made signature red sauce, topped with a healthy portion of ground bison meat spiced to perfection.  Add some mozzerella and a smattering of bleu cheese, and you have a delicious pizza inspired by <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" class="link">Noam Chomsky's baffling, yet gramatically correct sentence.</a></li>
+                  <li>This hearty pie comes with our house-made signature red sauce, topped with a healthy portion of ground bison meat spiced to perfection.  Add some mozzerella and a smattering of gorgonzola, and you have a delicious pizza inspired by <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" class="link">Noam Chomsky's baffling, yet gramatically correct sentence.</a></li>
               </ul>
+              <br>
+              <br>
         </div>
 <!-- Build Your Own Form -->
         <div class="col-md-6">
           <h2><strong>Build Your Own Pie</strong></h2>
           <br>
           <form id="build">
-            <p class="ingredient">Choose Your Crust Style</p>
-            <select class="form-control" id="crust">
-              <option value="1">Standard</option>
-              <option value="2">Ultra-Thin</option>
-              <option value="3">Whole Wheat (Thick)</option>
-              <option value="4">Gluten-Free</option>
-            </select>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="ingredient">Choose Your Size</p>
+                <select class="form-control" id="size">
+                  <option>Large (feeds 4-6 people)</option>
+                  <option>Medium (feeds3-5 people)</option>
+                  <option>Small (feeds 2, or 1 very hungry person)</option>
+                  <option>Personal (feeds 1)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <p class="ingredient">Choose Your Crust Style</p>
+                <select class="form-control" id="crust">
+                  <option value="1">Standard</option>
+                  <option value="2">Ultra-Thin</option>
+                  <option value="3">Whole Wheat (Thick)</option>
+                  <option value="4">Gluten-Free</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-md-4">
+                <p class="ingredient">Pick 'yer Protein</p>
+                <input type="checkbox" name="protein" value="pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="protein" value="sausage"> Sausage<br>
+                <input type="checkbox" name="protein" value="bacon"> Bacon<br>
+                <input type="checkbox" name="protein" value="buffalo"> Ground Buffalo<br>
+                <input type="checkbox" name="protein" value="anchovies"> Anchovies<br>
+              </div>
+              <div class="col-md-4">
+                <p class="ingredient">Keep it Cheesy</p>
+                <input type="checkbox" name="cheese" value="extra"> Extra Mozz<br>
+                <input type="checkbox" name="cheese" value="feta"> Feta<br>
+                <input type="checkbox" name="cheese" value="cotija"> Cotija<br>
+                <input type="checkbox" name="cheese" value="gorgonzola"> Gorgonzola<br>
+              </div>
+              <div class="col-md-4">
+                <p class="ingredient">Veggies and Fungi</p>
+                <input type="checkbox" name="veg" value="kalamata"> Kalamata Olives<br>
+                <input type="checkbox" name="veg" value="peppers"> Roasted Peppers<br>
+                <input type="checkbox" name="veg" value="mushrooms"> Portabello Mushrooms<br>
+                <input type="checkbox" name="veg" value="cremini"> Cremini Mushrooms<br>
+                <input type="checkbox" name="veg" value="reds"> Red Onions<br>
+                <input type="checkbox" name="veg" value="vidalia"> Vidalia Onions<br>
+              </div>
 
+            </div>
         </div>
 
       </div>
