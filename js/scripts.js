@@ -32,7 +32,10 @@ var subTotal = function() {
   }
 }
 
-
+var total = 0
+  for(var i = 0; i < eachCost.length; i++) {
+    total = total + eachCost[i];
+  }
 
 
 //user logic
