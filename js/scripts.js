@@ -7,6 +7,7 @@ var inputtedVeg = [" "];
 var inputtedSauce = [];
 var eachCost = [];
 
+
 function Pizza(size, crust, protein, cheese, veg, sauce) {
   this.size = size;
   this.crust = crust;
@@ -17,7 +18,7 @@ function Pizza(size, crust, protein, cheese, veg, sauce) {
 }
 
 Pizza.prototype.fullPie = function() {
-  return this.size + " pie with a" + this.crust + " Crust " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " as your sauce.";
+  return this.size + " pie with a" + this.crust + " Crust, " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " sauce.";
 }
 
 var subTotal = function() {
@@ -31,11 +32,6 @@ var subTotal = function() {
     eachCost.push(9 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
   }
 }
-
-var total = 0
-  for(var i = 0; i < eachCost.length; i++) {
-    total = total + eachCost[i];
-  }
 
 
 //user logic
@@ -72,5 +68,6 @@ $(document).ready(function() {
     inputtedVeg = [" "];
 
     console.log(eachCost)
+
   });
 });
