@@ -5,6 +5,7 @@ var inputtedProtein = [" "];
 var inputtedCheese = [" "];
 var inputtedVeg = [" "];
 var inputtedSauce = [];
+var eachCost = [];
 
 function Pizza(size, crust, protein, cheese, veg, sauce) {
   this.size = size;
@@ -19,17 +20,19 @@ Pizza.prototype.fullPie = function() {
   return this.size + " pie with a" + this.crust + " Crust " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " as your sauce.";
 }
 
-var total = function() {
+var subTotal = function() {
   if (inputtedSize === "Large") {
-    return (19 + ((inputtedProtein.length - 1) * 2.5) + ((inputtedCheese.length -1) * 1.5) + (inputtedVeg.length -1));
+    eachCost.push(19 + ((inputtedProtein.length - 1) * 2.5) + ((inputtedCheese.length -1) * 1.5) + (inputtedVeg.length -1));
   } else if (inputtedSize === "Medium") {
-    return (17 + ((inputtedProtein.length - 1) * 2) + (inputtedCheese.length - 1) + ((inputtedVeg.length - 1) * .75));
+    eachCost.push(17 + ((inputtedProtein.length - 1) * 2) + (inputtedCheese.length - 1) + ((inputtedVeg.length - 1) * .75));
   } else if (inputtedSize === "Small") {
-    return (15 + ((inputtedProtein.length - 1) * 1.5) + ((inputtedCheese.length - 1) * .75) + ((inputtedVeg.length - 1) * .50));
+    eachCost.push(15 + ((inputtedProtein.length - 1) * 1.5) + ((inputtedCheese.length - 1) * .75) + ((inputtedVeg.length - 1) * .50));
   } else if (inputtedSize === "Personal") {
-    return (9 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
+    eachCost.push(9 + (inputtedProtein.length - 1) + ((inputtedCheese.length - 1) * .50) + ((inputtedVeg.length - 1) * .25));
   }
 }
+
+
 
 
 //user logic
@@ -55,9 +58,16 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(inputtedSize, inputtedCrust, proteinString, cheeseString, vegString, inputtedSauce);
 
+
+
     $("#placedOrder").show();
     $(".orderedPie").append("<li>" + "One " + newPizza.fullPie() + "</li>");
-    $(".orderedAmount").text(total);
+    $(".orderedAmount").text(subTotal);
     $("#build").trigger("reset");
+    inputtedProtein = [" "];
+    inputtedCheese = [" "];
+    inputtedVeg = [" "];
+
+    console.log(eachCost)
   });
 });
