@@ -67,7 +67,15 @@ $(document).ready(function() {
     inputtedCheese = [" "];
     inputtedVeg = [" "];
 
-    console.log(eachCost)
+    var runningTotal = 0
+    $.each(eachCost,function() {
+      runningTotal += this;
+    });
+
+    var total = runningTotal.toFixed(2);
+    console.log(runningTotal);
+    console.log(eachCost);
+    $(".orderedAmount").text(total);
 
   });
 });
