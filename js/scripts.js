@@ -18,7 +18,7 @@ function Pizza(size, crust, protein, cheese, veg, sauce) {
 }
 
 Pizza.prototype.fullPie = function() {
-  return this.size + " pie with a" + this.crust + " Crust, " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " sauce.";
+  return this.size + " pie with a" + this.crust + " Crust, " + this.protein + this.cheese  + this.veg + "and " + this.sauce + " Sauce.";
 }
 
 var subTotal = function() {
@@ -36,6 +36,11 @@ var subTotal = function() {
 
 //user logic
 $(document).ready(function() {
+  $("button#pestoLarge").submit(function(event) {
+    event.preventDefault();
+    alert("click")
+  });
+
   $("form#build").submit(function(event) {
     event.preventDefault();
     inputtedSize = $("#size").val();
@@ -57,8 +62,6 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(inputtedSize, inputtedCrust, proteinString, cheeseString, vegString, inputtedSauce);
 
-
-
     $("#placedOrder").show();
     $(".orderedPie").append("<li>" + "One " + newPizza.fullPie() + "</li>");
     $(".orderedAmount").text(subTotal);
@@ -73,9 +76,8 @@ $(document).ready(function() {
     });
 
     var total = runningTotal.toFixed(2);
-    console.log(runningTotal);
-    console.log(eachCost);
-    $(".orderedAmount").text(total);
 
+    $(".orderedAmount").text(total);
   });
+
 });

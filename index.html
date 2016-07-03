@@ -31,13 +31,13 @@
             <ul>
               <li><strong>P-Egg-STO</strong></li>
                 <ul>
-                  <li>Our signature pie with house-made pesto as the sauce, a light sprinkling of hard cheeses all topped with an egg, sunnyside up.  (If you're getting this one delivered, we recommend cooking the egg on the stovetop before serving).</li>
+                  <li>Our signature pie with house-made pesto as the sauce, a light sprinkling of hard cheeses all topped with an egg, sunnyside up and some fresh ground pepper.  (If you're getting this one delivered, we recommend cooking your own egg on the stovetop before serving).</li>
                 </ul>
                 <br>
-                <div class="btn-group" id="pesto">
-                    <button type="submit" class="btn btn-info btn-sm">Add Large</button>
-                    <button type="submit" class="btn btn-warning btn-sm">Add Medium</button>
-                    <button type="submit" class="btn btn-info btn-sm">Add Small</button>
+                <div class="btn-group pestoPies">
+                    <button type="submit" class="btn btn-info btn-sm" id="pestoLarge">Add Large</button>
+                    <button type="submit" class="btn btn-warning btn-sm" id="pestoMedium">Add Medium</button>
+                    <button type="submit" class="btn btn-info btn-sm" id="pestoSmall">Add Small</button>
                 </div>
               <br>
               <br>
@@ -46,10 +46,10 @@
                   <li>Tableside is a reference to our favorite appetizer at any Mexican restaurant, the tableside guacamole.  Tableside has an Ultra-Thin crust pizza, topped with a Tapatio inspired red sauce and cotija cheese.  We top off the hot pie with a heaping scoop of our fresh guacamole</li>
                 </ul>
               <br>
-              <div class="btn-group" id="table">
-                  <button type="submit" class="btn btn-info btn-sm">Add Large</button>
-                  <button type="submit" class="btn btn-warning btn-sm">Add Medium</button>
-                  <button type="submit" class="btn btn-info btn-sm">Add Small</button>
+              <div class="btn-group tableside">
+                  <button type="submit" class="btn btn-info btn-sm" id="tablesideLarge">Add Large</button>
+                  <button type="submit" class="btn btn-warning btn-sm" id="tablesideMedium">Add Medium</button>
+                  <button type="submit" class="btn btn-info btn-sm" id="tablesideSmall">Add Small</button>
               </div>
               <br>
               <br>
@@ -58,10 +58,10 @@
                   <li>This hearty pie comes with our house-made signature red sauce, topped with a healthy portion of ground bison meat spiced to perfection.  Add some mozzerella and a smattering of gorgonzola, throw on a some sweet vidalia onions and you have a delicious pizza inspired by <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" class="link">Noam Chomsky's baffling, yet gramatically correct sentence.</a></li>
               </ul>
               <br>
-              <div class="btn-group" id="buffaloBuffalo">
-                  <button type="submit" class="btn btn-info btn-sm">Add Large</button>
-                  <button type="submit" class="btn btn-warning btn-sm">Add Medium</button>
-                  <button type="submit" class="btn btn-info btn-sm">Add Small</button>
+              <div class="btn-group bB">
+                  <button type="submit" class="btn btn-info btn-sm" id="bBLarge">Add Large</button>
+                  <button type="submit" class="btn btn-warning btn-sm" id="bBMedium">Add Medium</button>
+                  <button type="submit" class="btn btn-info btn-sm" id="bBSmall">Add Small</button>
               </div>
         </div>
 <!-- Build Your Own Form -->
@@ -152,6 +152,7 @@
                   <option value="Barbecue">Barbecue</option>
                 </select>
               </div>
+              <br>
               <div class="col-md-6">
                 <label class="ingredient" for="instructions">Special Instructions</label>
                 <input id="instructions" class="form-control" type="text" placeholder="we also accept compliments">
@@ -170,11 +171,13 @@
             <img src="img/oven.jpg" alt="delicious wood-fired pizza" class="img-rounded img-responsive" />
           </div>
           <div class="col-md-7 jumbotron">
-            <h2>You Ordered:</h2>
+            <h2>Your Order:</h2>
             <ul class="orderedPie">
 
             </ul>
-            <h3><strong>Your Total is:  $<span class="orderedAmount"></span></strong><h3>
+            <h3><strong>Total:  $ <span class="orderedAmount"></span></strong><h3>
+            <button type="submit" class="btn btn-danger btn-lrg btn-block" id="orderSubmit">Submit Your Order</button>
+            <br>
           </div>
         </div>
         <br>

@@ -60,3 +60,7 @@ ul {
   font-weight:bold;
   padding-bottom:1.3em;
 }
+
+#orderSubmit {
+  float:right
+}
