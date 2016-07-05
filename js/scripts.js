@@ -80,4 +80,6 @@ $(document).ready(function() {
     $(".orderedAmount").text(total);
   });
 
+
+
 });
